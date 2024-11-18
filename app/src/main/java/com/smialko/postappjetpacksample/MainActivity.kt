@@ -13,11 +13,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.smialko.postappjetpacksample.ui.theme.PostAppJetpackSampleTheme
 import com.smialko.postappjetpacksample.ui.theme.presentation.MainScreen
-import com.smialko.postappjetpacksample.ui.theme.presentation.MainViewModel
+import com.smialko.postappjetpacksample.ui.theme.presentation.NewsFeedViewModel
 
 class MainActivity : ComponentActivity() {
 
-    private val viewModel by viewModels<MainViewModel>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -28,7 +27,7 @@ class MainActivity : ComponentActivity() {
                         .background(MaterialTheme.colorScheme.background)
                         .padding(8.dp)
                 ) {
-                    MainScreen(viewModel)
+                    MainScreen()
                 }
             }
         }

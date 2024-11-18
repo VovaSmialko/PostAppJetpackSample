@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.parcelize)
 }
 
 android {
@@ -59,8 +60,10 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-    implementation (libs.androidx.runtime.livedata)
-    implementation (libs.androidx.activity.compose.v182)
+    implementation(libs.androidx.runtime.livedata)
+    implementation(libs.androidx.activity.compose.v182)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.gson)
     implementation(libs.androidx.navigation.compose)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
